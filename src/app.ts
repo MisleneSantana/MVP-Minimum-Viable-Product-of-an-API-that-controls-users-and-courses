@@ -1,6 +1,10 @@
-import express, { Application, json } from 'express'
+import 'express-async-errors';
+import express, { Application } from 'express';
+import { handleErrorMiddleware } from './middlewares/handleErrors.middlewares';
 
-const app: Application = express()
-app.use(json())
+const app: Application = express();
+app.use(express.json());
 
-export default app
+app.use(handleErrorMiddleware); //Último da aplicação
+
+export default app;
