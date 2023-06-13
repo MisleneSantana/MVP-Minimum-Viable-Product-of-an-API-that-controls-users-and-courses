@@ -3,9 +3,9 @@ INSERT INTO
     "users" (% I)
 VALUES
     (% L) RETURNING *;
--- 
-select
-    *
-from
-    users;
 
+-- GET / users:
+SELECT
+    *
+FROM
+    "users";
