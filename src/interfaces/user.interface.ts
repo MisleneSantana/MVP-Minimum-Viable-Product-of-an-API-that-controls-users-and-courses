@@ -1,14 +1,17 @@
+import { z } from 'zod';
+import {
+  userCreateOutputSchema,
+  userCreateSchema,
+  userReadSchema,
+  userSchema,
+  userUpdateSchema,
+} from '../schemas/user.schema';
 import { QueryResult } from 'pg';
 
-export interface IUser {
-  id: number;
-  name: string;
-  email: string;
-  password: string;
-  admin?: boolean;
-}
+export type TUser = z.infer<typeof userSchema>;
 
-export type TUserCreate = Omit<IUser, 'id'>;
-export type TUserUpdate = Partial<TUserCreate>;
-export type TUserRead = Array<IUser>;
-export type TUserResult = QueryResult<IUser>;
+export type TUserCreate = z.infer<typeof userCreateSchema>;
+export type TUserCreateOutput = z.infer<typeof userCreateOutputSchema>;
+export type TUserRead = z.infer<typeof userReadSchema>;
+export type TUserUpdate = z.infer<typeof userUpdateSchema>;
+export type TUserResult = QueryResult<TUser>;

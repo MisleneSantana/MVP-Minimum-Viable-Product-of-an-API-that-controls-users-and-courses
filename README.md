@@ -176,7 +176,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Email already registered"
+    "message": "Email already registered"
   }
   ```
 
@@ -189,9 +189,9 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
   ```json
   // Cadastrando com admin igual a true
   {
-  	"email": "ugo",
-  	"password": 1234,
-  	"admin": true
+    "email": "ugo",
+    "password": 1234,
+    "admin": true
   }
   ```
 
@@ -202,9 +202,9 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"name": ["Required"],
-  	"email": ["Invalid email"],
-  	"password": ["Expected string, received number"]
+    "name": ["Required"],
+    "email": ["Invalid email"],
+    "password": ["Expected string, received number"]
   }
   ```
 
@@ -245,8 +245,8 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"email": "ugo@kenzie.com.br",
-  	"password": "1234"
+    "email": "ugo@kenzie.com.br",
+    "password": "1234"
   }
   ```
 
@@ -273,7 +273,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Wrong email/password"
+    "message": "Wrong email/password"
   }
   ```
 
@@ -285,8 +285,8 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"email": "ugo",
-  	"password": 1234
+    "email": "ugo",
+    "password": 1234
   }
   ```
 
@@ -297,8 +297,8 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"email": ["Invalid email"],
-  	"password": ["Expected string, received number"]
+    "email": ["Invalid email"],
+    "password": ["Expected string, received number"]
   }
   ```
 
@@ -343,18 +343,18 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   [
-  	{
-  		"id": 1,
-  		"name": "Ugo",
-  		"email": "ugo@kenzie.com.br",
-  		"admin": true
-  	},
-  	{
-  		"id": 2,
-  		"name": "Lucas",
-  		"email": "lucas@kenzie.com.br",
-  		"admin": false
-  	}
+    {
+      "id": 1,
+      "name": "Ugo",
+      "email": "ugo@kenzie.com.br",
+      "admin": true
+    },
+    {
+      "id": 2,
+      "name": "Lucas",
+      "email": "lucas@kenzie.com.br",
+      "admin": false
+    }
   ]
   ```
 
@@ -367,7 +367,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Missing bearer token"
+    "message": "Missing bearer token"
   }
   ```
 
@@ -393,7 +393,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Insufficient permission"
+    "message": "Insufficient permission"
   }
   ```
 
@@ -443,22 +443,22 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   [
-  	{
-  		"couseId": 1,
-  		"courseName": "Frontend",
-  		"courseDescription": "HTML, CSS e JavaScript",
-  		"userActiveInCourse": true,
-  		"userId": 1,
-  		"userName": "Ugo"
-  	},
-  	{
-  		"couseId": 2,
-  		"courseName": "React",
-  		"courseDescription": "Biblioteca React para construção de frontend",
-  		"userActiveInCourse": false,
-  		"userId": 1,
-  		"userName": "Ugo"
-  	}
+    {
+      "couseId": 1,
+      "courseName": "Frontend",
+      "courseDescription": "HTML, CSS e JavaScript",
+      "userActiveInCourse": true,
+      "userId": 1,
+      "userName": "Ugo"
+    },
+    {
+      "couseId": 2,
+      "courseName": "React",
+      "courseDescription": "Biblioteca React para construção de frontend",
+      "userActiveInCourse": false,
+      "userId": 1,
+      "userName": "Ugo"
+    }
   ]
   ```
 
@@ -471,7 +471,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Missing bearer token"
+    "message": "Missing bearer token"
   }
   ```
 
@@ -497,7 +497,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "No course found"
+    "message": "No course found"
   }
   ```
 
@@ -510,7 +510,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Insufficient permission"
+    "message": "Insufficient permission"
   }
   ```
 
@@ -573,8 +573,8 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"name": "Frontend",
-  	"description": "HTML, CSS e JavaScript"
+    "name": "Frontend",
+    "description": "HTML, CSS e JavaScript"
   }
   ```
 
@@ -585,9 +585,9 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"id": 1,
-  	"name": "Frontend",
-  	"description": "HTML, CSS e JavaScript"
+    "id": 1,
+    "name": "Frontend",
+    "description": "HTML, CSS e JavaScript"
   }
   ```
 
@@ -599,7 +599,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"description": 1234
+    "description": 1234
   }
   ```
 
@@ -610,8 +610,8 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"name": ["Required"],
-  	"description": ["Expected string, received number"]
+    "name": ["Required"],
+    "description": ["Expected string, received number"]
   }
   ```
 
@@ -624,7 +624,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Missing bearer token"
+    "message": "Missing bearer token"
   }
   ```
 
@@ -650,7 +650,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Insufficient permission"
+    "message": "Insufficient permission"
   }
   ```
 
@@ -677,16 +677,16 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   [
-  	{
-  		"id": 1,
-  		"name": "Frontend",
-  		"description": "HTML, CSS e JavaScript"
-  	},
-  	{
-  		"id": 2,
-  		"name": "React",
-  		"description": "Frontend com a biblioteca React"
-  	}
+    {
+      "id": 1,
+      "name": "Frontend",
+      "description": "HTML, CSS e JavaScript"
+    },
+    {
+      "id": 2,
+      "name": "React",
+      "description": "Frontend com a biblioteca React"
+    }
   ]
   ```
 
@@ -739,7 +739,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "User successfully vinculed to course"
+    "message": "User successfully vinculed to course"
   }
   ```
 
@@ -752,7 +752,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "User/course not found"
+    "message": "User/course not found"
   }
   ```
 
@@ -765,7 +765,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Missing bearer token"
+    "message": "Missing bearer token"
   }
   ```
 
@@ -791,7 +791,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Insufficient permission"
+    "message": "Insufficient permission"
   }
   ```
 
@@ -854,7 +854,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "User/course not found"
+    "message": "User/course not found"
   }
   ```
 
@@ -867,7 +867,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Missing bearer token"
+    "message": "Missing bearer token"
   }
   ```
 
@@ -893,7 +893,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Insufficient permission"
+    "message": "Insufficient permission"
   }
   ```
 
@@ -938,22 +938,22 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   [
-  	{
-  		"userId": 1,
-  		"userName": "Ugo",
-  		"couseId": 1,
-  		"courseName": "Frontend",
-  		"courseDescription": "HTML, CSS e JavaScript",
-  		"userActiveInCourse": true
-  	},
-  	{
-  		"userId": 2,
-  		"userName": "Lucas",
-  		"couseId": 1,
-  		"courseName": "Frontend",
-  		"courseDescription": "HTML, CSS e JavaScript",
-  		"userActiveInCourse": true
-  	}
+    {
+      "userId": 1,
+      "userName": "Ugo",
+      "couseId": 1,
+      "courseName": "Frontend",
+      "courseDescription": "HTML, CSS e JavaScript",
+      "userActiveInCourse": true
+    },
+    {
+      "userId": 2,
+      "userName": "Lucas",
+      "couseId": 1,
+      "courseName": "Frontend",
+      "courseDescription": "HTML, CSS e JavaScript",
+      "userActiveInCourse": true
+    }
   ]
   ```
 
@@ -966,7 +966,7 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Missing bearer token"
+    "message": "Missing bearer token"
   }
   ```
 
@@ -992,6 +992,6 @@ Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o 
 
   ```json
   {
-  	"message": "Insufficient permission"
+    "message": "Insufficient permission"
   }
   ```

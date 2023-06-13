@@ -1,12 +1,13 @@
+import { z } from 'zod';
 import { QueryResult } from 'pg';
+import { courseCreateSchema, courseReadSchema, courseSchema, courseUpdateSchema } from '../schemas/course.schema';
 
-export interface ICourse {
-  id: number;
-  name: string;
-  description: string;
-}
+export type TCourse = z.infer<typeof courseSchema>;
 
-export type TCourseCreate = Omit<ICourse, 'id'>;
-export type TCourseUpdate = Partial<TCourseCreate>;
-export type TCourseRead = Array<ICourse>;
-export type TCourseResult = QueryResult<ICourse>;
+export type TCourseCreate = z.infer<typeof courseCreateSchema>;
+
+export type TCourseRead = z.infer<typeof courseReadSchema>;
+
+export type TCourseUpdate = z.infer<typeof courseUpdateSchema>;
+
+export type TCourseResult = QueryResult<TCourse>;

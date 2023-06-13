@@ -1,9 +1,10 @@
 import format from 'pg-format';
 import { TUserCreate } from '../../__tests__/mocks/interfaces';
-import { IUser, TUserResult } from '../../interfaces/user.interface';
+import { TUser, TUserCreateOutput, TUserResult } from '../../interfaces/user.interface';
 import { client } from '../../database';
+import { userCreateOutputSchema } from '../../schemas/user.schema';
 
-export const createUserService = async (userData: TUserCreate): Promise<IUser> => {
+export const createUserService = async (userData: TUser): Promise<TUserCreateOutput> => {
   const queryFormat: string = format(
     `
     INSERT INTO
@@ -16,5 +17,5 @@ export const createUserService = async (userData: TUserCreate): Promise<IUser> =
   );
 
   const queryResult: TUserResult = await client.query(queryFormat);
-  return queryResult.rows[0];
+  return userCreateOutputSchema.parse(queryResult.rows[0]);
 };
