@@ -10,9 +10,8 @@ export const userSchema = z.object({
 
 export const userCreateSchema = userSchema.omit({ id: true });
 
-export const userCreateOutputSchema = userSchema.omit({ password: true });
+export const userCreateReturnSchema = userSchema.omit({ password: true });
 
-export const userReadSchema = userCreateOutputSchema.array();
-// export const userReadSchema = userSchema.array();
+export const userReadSchema = userCreateReturnSchema.array();
 
 export const userUpdateSchema = userCreateSchema.partial();

@@ -10,7 +10,7 @@ export const verifyEmailExistsMiddleware = async (req: Request, res: Response, n
 
   const userEmail: TUser = queryResult.rows[0];
   if (userEmail) {
-    throw new AppError('Email already registered.', 409);
+    throw new AppError('Email already registered', 409);
   }
   return next();
 };

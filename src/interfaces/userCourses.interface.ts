@@ -1,13 +1,4 @@
-import { QueryResult } from 'pg';
+import { z } from 'zod';
+import { userCoursesSchema } from '../schemas/userCourses.schema';
 
-export interface IUserCourses {
-  id: number;
-  active: boolean;
-  userId: number;
-  courseId: number;
-}
-
-export type TUserCourseCreate = Omit<IUserCourses, 'id'>;
-export type TUserCourseUpdate = Partial<TUserCourseCreate>;
-export type TUserCourseRead = Array<IUserCourses>;
-export type TUserCourseResult = QueryResult<IUserCourses>;
+export type TUserCourses = z.infer<typeof userCoursesSchema>;

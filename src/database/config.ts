@@ -1,8 +1,8 @@
-import "dotenv/config";
-import { Client, ClientConfig } from "pg";
+import 'dotenv/config';
+import { Client, ClientConfig } from 'pg';
 
 const config = (): ClientConfig => {
-  if (process.env.NODE_ENV === "test") {
+  if (process.env.NODE_ENV === 'test') {
     return {
       user: process.env.DB_TEST_USER,
       password: process.env.DB_TEST_PASSWORD,
