@@ -1,27 +1,28 @@
 import { QueryConfig, QueryResult } from 'pg';
 import { client } from '../../database';
+import { AppError } from '../../error';
 
 export const readUserCoursesService = async (userId: string) => {
   const queryString: string = `
-    SELECT 
-      "c"."id" as "courseId",
-		  "c"."name" as "courseName",
-		  "c"."description" as "courseDescription",
-		  "uc"."active" as "userActiveInCourse",
-		  "u"."id" as "userId",
-		  "u"."name" as "userName"
-    FROM 
-      "userCourses" as "uc"
-    JOIN 
-      "courses" as "c"
-    ON 
-      "uc"."userId" = "c"."id"
-    JOIN 
-      "users" as "u"
-    ON 
-      "uc"."courseId" = "u"."id"
-    WHERE 
-      "u"."id" = $1;
+  SELECT 
+  	"c"."id" as "courseId",
+		"c"."name" as "courseName",
+		"c"."description" as "courseDescription",
+    "uc"."active" as "userActiveInCourse",
+    "u"."id" as "userId",
+		"u"."name" as "userName"
+  FROM 
+    "users" as "u"
+  JOIN 
+    "userCourses" as "uc"
+  ON 
+    "uc"."userId" = "u".id
+  JOIN 
+    "courses" as "c"
+  ON 
+    "uc"."courseId" = "c".id
+  WHERE 
+    "u"."id" = $1;
   `;
 
   const queryConfig: QueryConfig = {
@@ -30,6 +31,10 @@ export const readUserCoursesService = async (userId: string) => {
   };
 
   const queryResult: QueryResult = await client.query(queryConfig);
+
+  if (queryResult.rowCount === 0) {
+    throw new AppError('No course found', 404);
+  }
 
   return queryResult.rows;
 };

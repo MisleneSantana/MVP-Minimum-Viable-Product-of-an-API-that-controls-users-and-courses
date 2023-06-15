@@ -6,3 +6,5 @@ export const userCoursesSchema = z.object({
   userId: z.number().positive(),
   courseId: z.number().positive(),
 });
+
+export const userCoursesCreateSchema = userCoursesSchema.omit({ id: true, userId: true, courseId: true });

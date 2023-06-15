@@ -1,21 +1,19 @@
-import format from 'pg-format';
-import { TUser } from '../../interfaces/user.interface';
-import { TUserCourses } from '../../interfaces/userCourses.interface';
 import { client } from '../../database';
-import { QueryResult } from 'pg';
+import { QueryConfig } from 'pg';
 
-export const createLinksTheUserToCourseService = async (courseId: string, userId: string): Promise<any> => {
-  const queryFormat: string = format(
-    `
+export const createLinksTheUserToCourseService = async (courseId: string, userId: string): Promise<object> => {
+  const queryTemplate: string = `
     INSERT INTO
-        "userCourses" (%I)
+        "userCourses" ("courseId", "userId")
     VALUES
-        (%L) RETURNING *;
-  `,
-    Object.keys(userId),
-    Object.values(courseId)
-  );
+        ($1, $2) RETURNING *;
+  `;
 
-  const queryResult: QueryResult = await client.query(queryFormat);
-  return queryResult.rows[0];
+  const queryConfig: QueryConfig = {
+    text: queryTemplate,
+    values: [courseId, userId],
+  };
+
+  await client.query(queryConfig);
+  return { message: 'User successfully vinculed to course' };
 };
