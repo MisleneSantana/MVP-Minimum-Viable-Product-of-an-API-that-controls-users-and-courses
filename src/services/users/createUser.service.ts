@@ -10,9 +10,9 @@ export const createUserService = async (userData: TUser): Promise<TUserCreateRet
   const queryFormat: string = format(
     `
     INSERT INTO
-        "users" (%I)
+      "users" (%I)
     VALUES
-        (%L) RETURNING *;
+      (%L) RETURNING *;
   `,
     Object.keys(userData),
     Object.values(userData)

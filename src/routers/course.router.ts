@@ -17,7 +17,6 @@ import { veriFyIsAdmin } from '../middlewares/verifyIsAdmin.middlewares';
 
 export const courseRouter: Router = Router();
 
-// 1. Create new course:
 courseRouter.post(
   '',
   verifyToken,
@@ -26,10 +25,8 @@ courseRouter.post(
   createCourseController
 );
 
-// 2. Read all courses:
 courseRouter.get('', retrieveCoursesController);
 
-// 3. Register a course to a user
 courseRouter.post(
   '/:courseId/users/:userId',
   verifyCourseExistsMiddleware,
@@ -40,7 +37,6 @@ courseRouter.post(
   linksTheUserToCourseController
 );
 
-// 4. Setar matrícula para false do usuário em um curso
 courseRouter.delete(
   '/:courseId/users/:userId',
   verifyCourseExistsMiddleware,
@@ -50,7 +46,6 @@ courseRouter.delete(
   disablesACourseController
 );
 
-// 5. Listar todos os usuários matriculados em um curso
 courseRouter.get(
   '/:id/users',
   verifyToken,

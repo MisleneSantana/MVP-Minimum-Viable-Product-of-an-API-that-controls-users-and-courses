@@ -12,6 +12,6 @@ app.use('/users', userRouter);
 app.use('/login', sessionLoginRouter);
 app.use('/courses', courseRouter);
 
-app.use(handleErrorMiddleware); //Último da aplicação
+app.use(handleErrorMiddleware);
 
 export default app;
