@@ -7,7 +7,6 @@ export const verifyCourseExistsMiddleware = async (req: Request, res: Response, 
   const { courseId } = req.params;
 
   const queryResult: TCourseResult = await client.query('SELECT * FROM "courses" WHERE id = $1;', [courseId]);
-
   const courseExists: TCourse = queryResult.rows[0];
 
   if (!courseExists) {

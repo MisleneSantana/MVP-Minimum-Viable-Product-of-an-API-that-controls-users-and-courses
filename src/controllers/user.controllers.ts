@@ -11,7 +11,6 @@ export const createUserController = async (req: Request, res: Response): Promise
 
 export const retrieveUsersController = async (req: Request, res: Response): Promise<Response> => {
   const users: TUserCreateReturn[] = await retrieveUsersService();
-
   return res.status(200).json(users);
 };
 
@@ -19,6 +18,5 @@ export const readUserCoursesController = async (req: Request, res: Response): Pr
   const { id } = req.params;
 
   const userId = await readUserCoursesService(id);
-
   return res.json(userId);
 };

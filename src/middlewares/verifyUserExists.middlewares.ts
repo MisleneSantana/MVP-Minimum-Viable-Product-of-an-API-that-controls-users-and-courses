@@ -7,7 +7,6 @@ export const verifyUserExistsMiddleware = async (req: Request, res: Response, ne
   const { userId } = req.params;
 
   const queryResult: TUserResult = await client.query('SELECT * FROM "users" WHERE id = $1;', [userId]);
-
   const userExists: TUser = queryResult.rows[0];
 
   if (!userExists) {

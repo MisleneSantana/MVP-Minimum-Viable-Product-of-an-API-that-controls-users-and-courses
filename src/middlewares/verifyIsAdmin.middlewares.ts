@@ -7,6 +7,5 @@ export const veriFyIsAdmin = async (req: Request, res: Response, next: NextFunct
   if (!admin) {
     throw new AppError('Insufficient permission', 403);
   }
-
   return next();
 };
