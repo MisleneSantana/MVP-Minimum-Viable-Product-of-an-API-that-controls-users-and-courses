@@ -1,38 +1,4 @@
-# User e Courses + Permissão de Administrador
-
-# Introdução
-
-A empresa que você trabalha precisa criar um MVP (Minimum Viable Product) de uma API que faz o controle de usuários e cursos em que esses usuários serão matriculados. Essa API também precisa ter um controle de acessos, onde alguns recursos podem ser acessados apenas por usuários que fizeram login na aplicação, e outros recursos apenas usuários que fizeram login e tem permissões de administrador podem acessar.
-
-Você foi o desenvolvedor selecionado para implementar o MVP levando em conta o que está sendo requisitado a seguir.
-
-# Regras da entrega
-
-**A entrega deve seguir as seguintes regras:**
-
-- O código deve estar em **_TypeScript_**, caso não esteja a entrega será zerada;
-- Deverá ser utilizado um banco de dados **_postgres_** para a elaboração da API;
-- O nome da tabela, das colunas e demais especificações, devem ser **_seguidas à risca_**. Caso tenha divergência, será descontado nota;
-  - Tenha muita atenção sobre o nome das chaves nos objetos de entrada e saída de cada requisição;
-- Na raiz do diretório deve-se conter uma pasta nomeada sql, com dois arquivos:
-  - createTables.sql: contendo as queries de criação e inserção das tabelas;
-  - diagram.png/jpg: um arquivo .png ou .jpg contendo o diagrama da tabela;
-- caso o arquivo createTables.sql não exista, a entrega será zerada.
-
-**Essa entrega possui testes automatizados, portanto:**
-
-- É necessário executar um **npm install** assim que fizer o clone do repositório para que as depedências dos testes sejam instaladas.
-- É necessário criar um banco de dados separado para a execução dos testes.
-  - Faça a criação do banco de testes e coloque os dados de conexão dele nas variáveis de ambiente que contém o indicador **_TEST_** no nome, assim sua aplicação vai saber em qual banco deve se conectar no momento de executar os testes, evitando inconsistência nos dados.
-- Para que os testes possam ser executados, existe um script de limpeza do banco que utiliza as queries do arquivo **createTables.sql** para ser executado, por isso é importante seguir as orientações sobre subdiretório sql e seus arquivos à risca.
-
-  - Caso o subdiretório sql e o arquivo createTables.sql não estejam com os nomes corretos ou no caminho correto os testes falharão, pois não será possível encontrar as queries a serem executadas;
-  - Caso o nome de alguma tabela, tipo ou coluna não esteja de acordo com o esperado, os testes também falharão.
-
-- A organização dos demais arquivos e pastas deve seguir o que foi visto previamente.
-- Todos os pacotes necessários para desenvolver a aplicação devem ser instalados, já que apenas os pacotes de teste foram incluídos no repositório.
-
-#
+# Users and courses
 
 ## **Tabelas do banco de dados**
 
